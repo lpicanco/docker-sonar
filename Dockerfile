@@ -33,12 +33,11 @@ WORKDIR /data
 
 ADD create_database.sql /tmp/create_database.sql
     
-
 # Define mountable directories.
 VOLUME ["/etc/mysql", "/var/lib/mysql", "/var/log/mysql", "/opt/sonar/extensions/plugins"]
 
-
 ADD start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
 
 # Expose ports.
 EXPOSE 3306
