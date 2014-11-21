@@ -32,12 +32,10 @@ RUN \
 WORKDIR /data
 
 ADD create_database.sql /tmp/create_database.sql
-
-#RUN /etc/init.d/mysql start && \
     
 
 # Define mountable directories.
-VOLUME ["/etc/mysql", "/var/lib/mysql", "/var/log/mysql"]
+VOLUME ["/etc/mysql", "/var/lib/mysql", "/var/log/mysql", "/opt/sonar/extensions/plugins"]
 
 
 ADD start.sh /usr/local/bin/start.sh
@@ -47,4 +45,3 @@ EXPOSE 3306
 EXPOSE 9000
 
 CMD ["/usr/local/bin/start.sh"]
-
