@@ -1,4 +1,4 @@
-FROM 	dockerfile/java:oracle-java6
+FROM dockerfile/java:oracle-java8
 MAINTAINER Luiz Picanço "lpicanco@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
