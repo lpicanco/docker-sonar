@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java8
+FROM airdock/oracle-jdk
 MAINTAINER Luiz Picanço "lpicanco@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
